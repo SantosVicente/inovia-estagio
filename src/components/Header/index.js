@@ -6,9 +6,9 @@ function Header() {
     return (
         <div>
             <nav>
-                <img src = {Logo} className='logo'/>
+                <img src = { Logo } className='logo'/>
                 <ul>
-                    <li className='home'>
+                    <li className='item1'>
                         <Link to="/">Home</Link>
                     </li>
                     <li>

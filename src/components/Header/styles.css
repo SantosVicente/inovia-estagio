@@ -1,14 +1,27 @@
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 5rem;
     border-bottom: 1px solid brown;
 }
 
 nav a {
     text-decoration: none;
+    border: 1px solid rgba(240, 248, 255, 0.600);
+    border-radius: 6px;
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    padding-left: .6rem;
+    padding-right: .6rem;
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav a:hover {
+    background-color: rgba(240, 248, 255, 0.800);
+    color: #161616;
+    transition: .2s;
 }
 
 nav ul {
@@ -20,7 +33,7 @@ nav li {
     margin-left: 1rem;
 }
 
-nav .home {
+nav .item1 {
     margin-left: 0;
 }
 
