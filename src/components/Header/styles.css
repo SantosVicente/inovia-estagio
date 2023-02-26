@@ -1,0 +1,29 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid brown;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 1rem;
+}
+
+nav .home {
+    margin-left: 0;
+}
+
+.logo {
+    width: 230px;
+}
