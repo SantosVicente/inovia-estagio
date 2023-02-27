@@ -3,7 +3,7 @@ import '../Global.css'
 import Header from '../../components/Header'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import blogFetch from '../../axios/config';
+import request from '../../axios/config';
 
 function Login () {
 
@@ -11,7 +11,7 @@ function Login () {
 
     const getPosts = async() => {
         try {
-            const response = await blogFetch.get("/person"); //acessa através do blogFetch a API e coloca todos os dados na const
+            const response = await request.get("/person"); //acessa através do blogFetch a API e coloca todos os dados na const
             const data = response.person; //passa especificamente os dados para a const
             setPosts(data); //seta o valor do const posts como o data
 
