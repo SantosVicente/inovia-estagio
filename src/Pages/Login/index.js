@@ -10,19 +10,14 @@ function Login () {
     const [posts, setPosts] = useState([]) //o posts vira um array vazio e o SetPosts modifica o valor do posts
 
     const getPosts = async() => {
-
-        try{
-
-            const response = await blogFetch.get("/posts")
-
-            const data = response.data
-
-            setPosts(data);
+        try {
+            const response = await blogFetch.get("/person"); //acessa através do blogFetch a API e coloca todos os dados na const
+            const data = response.person; //passa especificamente os dados para a const
+            setPosts(data); //seta o valor do const posts como o data
 
         } catch (error) {
             console.log(error);
         }
-
     }
 
     useEffect(() => {
@@ -33,14 +28,6 @@ function Login () {
         <div className='login'>
             <Header />
             <h1>Você está na Página Login</h1>
-            {posts.lenght === 0 ? <p>Carregando...</p> : (
-                posts.map((post) => (
-                    <div className="post" key={post.id}> 
-                        <h2>{post.title}</h2>
-                        <p>{post.body}</p>
-                    </div>
-                ))
-            )}
         </div>
     );
 }
