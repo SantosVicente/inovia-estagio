@@ -1,9 +1,17 @@
 import axios from "axios";
 
-const request = axios.create ({
-    baseURL: "http://inovia.gbf3dqe5f0dydxhv.eastus.azurecontainer.io:3000/api",
+
+/*
+O request abaixo funcionará somente para o realizar get e delete. 
+Para fazer post ou put se deve fazer um outro arquivo q contenha mais uma 
+especificação além da baseURL e o headers, sendo essa o body, que deverá
+conter todos os dados que serão adicionados ou alterados
+*/
+
+const request = axios.create({
+    baseURL: "http://inovia.eastus.cloudapp.azure.com/api/person",
     headers: {
-        Authorization: {'Access-Control-Allow-Origin' : '*'}   
+        'Access-Control-Allow-Origin': '*'
     }
 });
 
