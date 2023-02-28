@@ -2,7 +2,7 @@ import './styles.css'
 import '../Global.css'
 import Header from '../../components/Header'
 import { useState, useEffect } from 'react';
-import request from '../../axios/config';
+import request from '../../axios/configGet';
 
 function Login() {
     const [posts, setPosts] = useState([]) //o posts vira um array vazio e o SetPosts modifica o valor do posts
@@ -26,7 +26,7 @@ function Login() {
     return (
         <div className='login'>
             <Header />
-            <h1>Você está na Página Login</h1>
+            <h1>Você está na Página de Visualização</h1>
 
             {posts.length === 0 ? <h3>Carregando...</h3> : (
                 posts.map((post) => (

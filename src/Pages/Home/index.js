@@ -2,7 +2,7 @@ import './styles.css'
 import '../Global.css'
 import Header from '../../components/Header'
 import React, { useState, useEffect } from 'react';
-import request from '../../axios/config';
+import request from '../../axios/configGet';
 
 function Home() {
     const [data, setData] = useState(null);
@@ -33,7 +33,7 @@ function Home() {
     return (
         <div className='home'>
             <Header />
-            <h1>Você está na Página Inicial</h1>
+            <h1>Você está na Página de Pesquisa</h1>
             {data && (
                 <div>
                     <h2>Name: {data.title} {data.givenName} {data.middleInitial} {data.surname}</h2>
