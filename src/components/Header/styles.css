@@ -40,3 +40,11 @@ nav .item1 {
 .logo {
     width: 230px;
 }
+
+.btn_logo {
+    border: none;
+}
+
+.btn_logo:hover {
+    background-color: #161616;
+}

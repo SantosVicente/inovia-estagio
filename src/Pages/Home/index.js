@@ -22,12 +22,13 @@ function Home() {
 
     useEffect(() => {
         request.get(`/${id}`)
-            .then(response => {
-                setData(response.data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
+        
+        .then(response => {
+            setData(response.data);
+        })
+        .catch(error => {
+            console.log(error);
+        });
     }, [id]);
 
     return (

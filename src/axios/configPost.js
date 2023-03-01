@@ -6,7 +6,7 @@ const post = axios.create({
         'Access-Control-Allow-Origin': '*'
     },
     body: {
-
+        
     }
 });
 

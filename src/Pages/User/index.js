@@ -37,32 +37,36 @@ function User() {
     const [centimeters, setCentimeters] = useState('');
     const [latitude, setLatitude] = useState('');
     const [longitude, setLongitude] = useState('');
-    
-    const handleSubmit = event => {
-      event.preventDefault();
-      const data = {
-        title: title,
-        givenName: givenName,
-        middleInitial: middleInitial,
-        surname: surname,
-        streetAddress: streetAddress,
-        city: city,
-        state: state,
-        stateFull: stateFull,
-        bloodType: bloodType,
-        kilograms: kilograms,
-        centimeters: centimeters,
-        latitude: latitude,
-        longitude: longitude
-      };
-      axios.post('http://inovia.eastus.cloudapp.azure.com/api/person/', data)
-        .then(response => {
-          console.log(response.data);
-        })
-        .catch(error => {
-          console.log(error);
-        });
+
+    const Submit = event => {
+        event.preventDefault();
+        const data = {
+            title: title,
+            givenName: givenName,
+            middleInitial: middleInitial,
+            surname: surname,
+            streetAddress: streetAddress,
+            city: city,
+            state: state,
+            stateFull: stateFull,
+            bloodType: bloodType,
+            kilograms: kilograms,
+            centimeters: centimeters,
+            latitude: latitude,
+            longitude: longitude
+        };
+
+        axios.post('http://inovia.eastus.cloudapp.azure.com/api/person/', data)
+
+            .then(response => {
+                console.log(response.data);
+            })
+            .catch(error => {
+                console.log(error);
+            });
     };
+
+    /*para fazer delete se deve passar apenas o /:id do item que deseja excluir*/
 
     return (
 
@@ -71,7 +75,7 @@ function User() {
             <Header />
             <h1>Você está na Página de Cadastro</h1>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={Submit}>
                 <div>
                     <label htmlFor="title">Titulo:</label>
                     <input type="text" id="title" value={title} onChange={event => setTitle(event.target.value)} />
