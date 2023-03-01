@@ -1,8 +1,9 @@
-*{
-  background-color: #161616;
-  color: aliceblue;
+.home, .user, .login, .teste, .put{
+  text-align: center;
 }
 
-.home, .user, .login{
-  text-align: center;
+.template{
+  max-width: 75%;
+  padding-left: 12.5%;
+  padding-right: 12.5%;
 }
