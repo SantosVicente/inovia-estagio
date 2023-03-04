@@ -33,8 +33,8 @@ function Delete() {
                 </form>
             </div>
         </div>
+
     );
 }
 
-export default Delete
-    ;
+export default Delete;

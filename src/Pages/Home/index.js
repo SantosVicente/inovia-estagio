@@ -56,14 +56,13 @@ function Home() {
 
             <div className='template'>
 
-                <h1 className='title'>Bem vindo ao nosso Site!</h1>
+                <h1 className='title'>Seja Bem vindo ao BioMedk!</h1>
 
-                <p className='body_home'>Aqui você poderá acessar os dados sobre usuários por todo o Brasil, e conseguirá <br />expandir seu negócio para alcançar ainda mais pessoas!</p>
+                <p className='body_home'>Aqui você poderá acessar informações sobre a saúde de pessoas por todo o Brasil, e também <br />poderá contribuir para formar uma rede melhor de saúde</p>
 
                 <Link to="/data" className='button'>Comece Agora</Link>
 
             </div>
-
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import './styles.css'
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/UntitledBioMarkLogo.svg';
+import Logo from '../../assets/UntitledLogo.svg';
 
 function Header() {
     return (

@@ -2,3 +2,12 @@
     background-color: #c1c9de;
     min-height: 100vh;
 }
+
+.div_graph {
+    display: flex;
+    gap: 2rem;
+}
+
+#map { 
+    height: 180px; 
+}
