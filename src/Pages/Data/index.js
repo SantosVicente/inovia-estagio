@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import request from '../../axios/configGet';
 import Plot from 'react-plotly.js'
 import React from 'react';
-import { Popup, Marker, MapContainer, TileLayer, useMap } from 'react-leaflet'
 import Mapa from '../../components/Mapa';
 
 function Data() {
@@ -94,10 +93,10 @@ function Data() {
             console.log(browser);
             console.log(age);
             console.log(response);
-            */
-
             console.log(maleBloodType);
             console.log(femaleBloodType);
+            */
+
 
 
             setPosts(data);
@@ -133,7 +132,7 @@ function Data() {
 
                 <h1>Você está na Página de Visualização</h1>
 
-                <div >
+                <div className='group'>
                     <div className='div_graph'>
                         <Plot
                             data={[

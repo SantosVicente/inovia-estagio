@@ -11,12 +11,6 @@ import PUT from './PUT';
 
 function App() {
   return (
-    <>
-      <head>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
-          integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
-          crossorigin="" />
-      </head>
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} > </Route>
@@ -30,7 +24,6 @@ function App() {
           <Route exact path="/put" element={<PUT />} > </Route>
         </Routes>
       </Router>
-    </>
   );
 }
 
