@@ -8,6 +8,7 @@ import React from 'react';
 import Mapa from '../../components/Mapa';
 
 function Data() {
+
     const [posts, setPosts] = useState([]) //o posts vira um array vazio e o SetPosts modifica o valor do posts
     const [maleBloodType, setMaBlood] = useState([])
     const [femaleBloodType, setFeBlood] = useState([])
@@ -97,11 +98,10 @@ function Data() {
             console.log(femaleBloodType);
             */
 
-
-
-            setPosts(data);
+            setPosts(response.data);
             setMaBlood(maleBloodType);
             setFeBlood(femaleBloodType);
+
 
         } catch (error) {
             console.log(error);
@@ -112,18 +112,7 @@ function Data() {
         getPosts();
     }, []);
 
-
-    /*
-    var map = L.map('map').setView([51.505, -0.09], 13);
-
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    L.marker([51.5, -0.09]).addTo(map)
-        .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-        .openPopup();
-    */
+    console.log(posts)
 
     return (
         <div className='data'>
@@ -155,8 +144,13 @@ function Data() {
                             layout={{ width: 500, height: 400, title: 'Tipo Sanguíneo de Homens' }}
                         />
                     </div>
+
                     <div id='map'>
                         <Mapa />
+                    </div>
+
+                    <div className='listarTabela'>
+
                     </div>
                 </div>
             </div>
@@ -164,25 +158,5 @@ function Data() {
     );
 }
 
-/*
-<Plot
-    data={[
-        {
-            x: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-            y: [centimeters ? centimeters : 0],
-            type: 'scattergl',
-            marker: { color: 'red' },
-            name: 'Data Testing'
-        }
-    ]}
-/>
 
-{posts.length === 0 ? <h3>Carregando...</h3> : (
-    posts.map((post) => (
-        <div className="post" key={post.id}>
-            <h2>{post.givenName}</h2>
-        </div>
-    ))
-)}
-*/
 export default Data;

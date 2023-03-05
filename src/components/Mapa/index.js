@@ -38,9 +38,6 @@ function Mapa() {
         getPosts();
     }, []);
 
-    console.log(coordinators)
-    console.log(coordenadas)
-
     const customIcon = L.icon({
         iconUrl,
         iconSize: [25, 41],
